@@ -33,6 +33,7 @@ class _00_SortedArrayCheckerTest {
 		assertTrue(_00_SortedArrayChecker.charArraySorted(sorted));
 	}
 	
+	
 	@Test
 	void stringDoubleArray() {
 		String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
@@ -41,5 +42,7 @@ class _00_SortedArrayCheckerTest {
 		assertFalse(_00_SortedArrayChecker.stringArraySorted(unsorted));
 		assertTrue(_00_SortedArrayChecker.stringArraySorted(sorted));
 	}
+
+
 
 }
