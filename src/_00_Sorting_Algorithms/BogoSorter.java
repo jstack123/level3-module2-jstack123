@@ -3,7 +3,7 @@ package _00_Sorting_Algorithms;
 import java.util.Random;
 
 public class BogoSorter extends Sorter {
-	public BogoSorter() {
+	public BogoSorter() { 
 		type = "Bogo";
 	}
 	
