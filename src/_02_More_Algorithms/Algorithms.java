@@ -52,29 +52,64 @@ public class Algorithms {
 
 		for (int i = 0; i < message1.size(); i++) {
 			if (message1.get(i).contains("... --- ...")) {
-				System.out.println("hi");
-				return true;		
+
+				return true;
 			}
 		}
 		return false;
 	}
 
 	public static List<Double> sortScores(List<Double> results) {
-	double temp;
+		double temp;
 		for (int i = 0; i < results.size(); i++) {
-			for (int j = i+1; j < results.size()-1; j++) {
+			for (int j = i + 1; j < results.size(); j++) {
 				double one = results.get(i);
 				double two = results.get(j);
-				if (one>two) {
+
+				if (one > two) {
 					temp = two;
 					two = one;
 					one = temp;
+					results.set(i, one);
+					results.set(j, two);
 				}
 			}
 		}
-		
 		return results;
 	}
-	
+
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		String temp;
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			for (int j = i + 1; j < unsortedSequences.size(); j++) {
+				String previous = unsortedSequences.get(i);
+				String next = unsortedSequences.get(j);
+				if (previous.length() > next.length()) {
+					temp = next;
+					next = previous;
+					previous = temp;
+					unsortedSequences.set(i, previous);
+					unsortedSequences.set(j, next);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		for (int i = 0; i < words.size(); i++) {
+			for (int j = i + 1; j < words.size(); j++) {
+				String previous = words.get(i);
+				String next = words.get(j);
+
+				if (previous.compareTo(next) > 1) {
+					System.out.println("hi");
+				}
+			}
+		}
+
+		return words;
+
+	}
 
 }
